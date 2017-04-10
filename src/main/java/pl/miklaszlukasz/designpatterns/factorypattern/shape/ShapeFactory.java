@@ -4,8 +4,8 @@ import pl.miklaszlukasz.designpatterns.factorypattern.shape.impl.Circle;
 import pl.miklaszlukasz.designpatterns.factorypattern.shape.impl.Square;
 
 public class ShapeFactory {
-    public final String SQUARE = "square";
-    public final String CIRCLE = "circle";
+    public static final String SQUARE = "square";
+    public static final String CIRCLE = "circle";
 
     public Shape getShape(String shape) {
         if (shape.equals(SQUARE))
