@@ -17,18 +17,13 @@ public class ShapeFactoryTest {
 
     @Test
     public void shouldReturnSquare() {
-        Shape square = shapeFactory.getShape(ShapeFactory.SQUARE);
+        Shape square = shapeFactory.getShape(ShapeType.SQUARE);
         Assert.assertThat(square, IsInstanceOf.instanceOf(Square.class));
     }
 
     @Test
     public void shouldReturnCircle() {
-        Shape circle = shapeFactory.getShape(ShapeFactory.CIRCLE);
+        Shape circle = shapeFactory.getShape(ShapeType.CIRCLE);
         Assert.assertThat(circle, IsInstanceOf.instanceOf(Circle.class));
-    }
-
-    @Test(expected = IllegalArgumentException.class)
-    public void shouldThrowIllegalArgumentException() {
-        shapeFactory.getShape("test");
     }
 }
